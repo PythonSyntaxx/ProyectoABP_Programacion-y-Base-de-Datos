@@ -1,0 +1,42 @@
+# Aporte personal - Sistema de Gestión de Usuarios
+# Autor: Ariel Fernandez
+# Funciones desarrolladas: ver_usuarios() y registrar_usuario()
+
+def ver_usuarios():
+    print("Usuarios registrados:")
+    for u in usuarios:
+        print(f"ID: {u['id_user']} - Nombre: {u['nombre']} - Email: {u['email']} - Rol: {obtener_nombre_rol(u['id_rol'])}")
+
+def registrar_usuario():
+    global id_user_counter
+    print(" Registrar Usuario ")
+    nombre = input("Nombre: ")
+    email = input("Email: ")
+
+    for u in usuarios:
+        if u["email"] == email:
+            print(" El email ya está registrado.")
+            return
+
+    while True:
+        password = input("Contraseña: ")
+        if validar_contraseña(password):
+            break
+        else:
+            print(" La contraseña debe tener al menos 6 caracteres, incluir letras y números.")
+
+    print("Roles disponibles:")
+    for rol in roles:
+        print(f"{rol['id_rol']} - {rol['rol']}")
+
+    id_rol = int(input("Elige el rol: "))
+
+    usuarios.append({
+        "id_user": id_user_counter,
+        "nombre": nombre,
+        "email": email,
+        "password": password,
+        "id_rol": id_rol
+    })
+    id_user_counter += 1
+    print(" Usuario registrado correctamente.")
