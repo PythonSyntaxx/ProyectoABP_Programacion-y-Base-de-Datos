@@ -1,3 +1,25 @@
+# Explicacion del codigo
+
+**La función menu_principal() es la puerta de entrada al sistema y la encargada de iniciar el flujo principal del programa.**
+**Muestra un menú simple por consola con 3 opciones:**
+
+● Registrarse (nuevo usuario)
+
+● Iniciar sesión
+
+● Salir del sistema
+
+**Lee la opción del usuario mediante input().**
+**Dirige al usuario al flujo correspondiente:**
+
+● Si elige 1, llama a registrar_usuario().
+
+● Si elige 2, llama a login().
+
+● Si pone cualquier otra cosa, muestra "Adiós" y sale del bucle.
+
+**Usa un while True para que el menú se repita hasta que el usuario decida salir.**
+
 # Link del diagrama de clases
 
 Este diagrama representa el diseño del sistema de gestión de usuarios.
