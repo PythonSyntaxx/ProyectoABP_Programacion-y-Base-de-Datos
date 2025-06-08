@@ -1,43 +1,22 @@
-# Sistema de Gestión de Usuarios 
-import re
+Desarrollé las funciones validar_contraseña(), la estructura del menú_principal() y la inicialización de roles y usuarios por defecto, fundamentales para el funcionamiento y seguridad del sistema.
 
-roles = [
+- validar_contraseña()
+Valida que la contraseña ingresada cumpla con criterios mínimos de seguridad:
 
-    {"id_rol": 1, "rol": "admin"},
-    {"id_rol": 2, "rol": "estandar"}
-]
+Al menos 6 caracteres
 
-usuarios = [
+Debe contener tanto letras como números
 
-    {"id_user": 1, "nombre": "admin", "email": "admin@gmail.com", "password": "Admin1", "id_rol": 1},
-    {"id_user": 2, "nombre": "estandar", "email": "estandar@gmail.com", "password": "abc123", "id_rol": 2}
-]
+Esta función se utiliza durante el registro de usuarios y está diseñada para prevenir el uso de contraseñas débiles, asegurando un nivel básico de protección en el sistema.
 
-id_user_counter = 2
+- menú_principal()
+Es el punto de entrada al sistema tras un login exitoso.
+Muestra diferentes opciones según el rol del usuario (Administrador o Estándar), redirigiendo al conjunto de funciones permitidas para cada tipo.
+Implementa una lógica clara de control de acceso basada en roles, manteniendo la usabilidad desde consola.
 
-def validar_contraseña(password):
+- Inicialización de roles y usuarios por defecto
+Al inicio de la ejecución del programa, se precargan:
 
-    if len(password) < 6: 
-        return False
-    if not re.search(r"[a-zA-Z]", password):
-        return False
-    if not re.search(r"[0-9]", password):
-        return False
-    return True
+Una lista de roles definidos
 
-def menu_principal(): 
-
-    while True:
-        print("\===== SISTEMA DE GESTIÓN DE USUARIOS =====")
-        print("1. Registrarse")
-        print("2. Iniciar sesión")
-        print("3. Salir")
-        
-        opcion = input("Elige una opción: ")
-        if opcion == "1":
-            registrar_usuario()
-        elif opcion == "2":
-            login()
-        else: 
-            print("Adios")
-            break
+Usuarios base con distintas configuraciones (nombre, email, contraseña y rol)
