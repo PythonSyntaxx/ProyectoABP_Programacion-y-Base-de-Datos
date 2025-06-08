@@ -1,11 +1,14 @@
 # Sistema de Gestión de Usuarios 
 import re
+
 roles = [
+
     {"id_rol": 1, "rol": "admin"},
     {"id_rol": 2, "rol": "estandar"}
 ]
 
 usuarios = [
+
     {"id_user": 1, "nombre": "admin", "email": "admin@gmail.com", "password": "Admin1", "id_rol": 1},
     {"id_user": 2, "nombre": "estandar", "email": "estandar@gmail.com", "password": "abc123", "id_rol": 2}
 ]
@@ -13,6 +16,7 @@ usuarios = [
 id_user_counter = 2
 
 def validar_contraseña(password):
+
     if len(password) < 6:
         return False
     if not re.search(r"[a-zA-Z]", password):
@@ -22,6 +26,7 @@ def validar_contraseña(password):
     return True
 
 def menu_principal():
+
     while True:
         print("\===== SISTEMA DE GESTIÓN DE USUARIOS =====")
         print("1. Registrarse")
