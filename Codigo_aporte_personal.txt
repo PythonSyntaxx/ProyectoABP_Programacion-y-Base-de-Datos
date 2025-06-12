@@ -1,42 +1,55 @@
-# Aporte personal - Sistema de Gestión de Usuarios
-# Autor: Ariel Fernandez
-# Funciones desarrolladas: ver_usuarios() y registrar_usuario()
-
-def ver_usuarios():
-    print("Usuarios registrados:")
-    for u in usuarios:
-        print(f"ID: {u['id_user']} - Nombre: {u['nombre']} - Email: {u['email']} - Rol: {obtener_nombre_rol(u['id_rol'])}")
-
-def registrar_usuario():
-    global id_user_counter
-    print(" Registrar Usuario ")
-    nombre = input("Nombre: ")
+def login():
     email = input("Email: ")
+    password = input("Contraseña: ")
 
-    for u in usuarios:
-        if u["email"] == email:
-            print(" El email ya está registrado.")
+    for usuario in usuarios:
+        if usuario["email"] == email and usuario["password"] == password:
+            rol_nombre = obtener_nombre_rol(usuario["id_rol"])
+            print(f"Bienvenido {usuario['nombre']} ({rol_nombre})")
+            mostrar_menu(usuario)
             return
 
-    while True:
-        password = input("Contraseña: ")
-        if validar_contraseña(password):
-            break
-        else:
-            print(" La contraseña debe tener al menos 6 caracteres, incluir letras y números.")
+    print(" Email o contraseña incorrectos.")
 
-    print("Roles disponibles:")
+def obtener_nombre_rol(id_rol):
     for rol in roles:
-        print(f"{rol['id_rol']} - {rol['rol']}")
+        if rol["id_rol"] == id_rol:
+            return rol["rol"]
+    return "Desconocido"
 
-    id_rol = int(input("Elige el rol: "))
+def mostrar_menu(usuario):
+    if obtener_nombre_rol(usuario["id_rol"]) == "admin":
+        while True:
+            print(" MENÚ ADMIN ")
+            print("1. Ver usuarios")
+            print("2. Registrar usuario")
+            print("3. Modificar usuario")
+            print("4. Eliminar usuario")
+            print("5. Cerrar seción ")
+            opcion = input("Elige una opción: ")
 
-    usuarios.append({
-        "id_user": id_user_counter,
-        "nombre": nombre,
-        "email": email,
-        "password": password,
-        "id_rol": id_rol
-    })
-    id_user_counter += 1
-    print(" Usuario registrado correctamente.")
+            if opcion == "1":
+                ver_usuarios()
+            elif opcion == "2":
+                registrar_usuario()
+            elif opcion == "3":
+                modificar_usuario()
+            elif opcion == "4":
+                eliminar_usuario()
+            elif opcion == "5":
+                break
+            else:
+                print("Opcion invalida")
+    else:
+        while True:
+            print(" MENÚ USUARIO ")
+            print("1. Ver mis datos")
+            print("2. Salir")
+            opcion = input("Elige una opción: ")
+
+            if opcion == "1":
+                ver_mis_datos(usuario)
+            elif opcion == "2":
+                break
+            else:
+                print("Opcion invalida")
