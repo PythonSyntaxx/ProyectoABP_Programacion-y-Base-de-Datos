@@ -26,3 +26,15 @@ Desarrollo de un sistema de gestión de usuarios con control de acceso y privile
 - Imposibilidad de administrar usuarios sin interfaz administrativa.
 
 ---
+## 🎯 Objetivos
+
+**General:**  
+Desarrollar un sistema de gestión de usuarios que implemente control de acceso y funciones CRUD mediante consola en Python.
+
+**Específicos:**
+- Validar contraseñas.
+- Evitar duplicados por email.
+- Controlar acceso según rol.
+- Permitir operaciones de administración seguras.
+
+---
