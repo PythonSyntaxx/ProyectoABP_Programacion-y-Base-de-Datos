@@ -47,10 +47,10 @@ El proyecto representa una simulación realista de un sistema básico de gestió
 
 ## 🛠️ Acciones realizadas
 
--Estructura de roles y usuarios.
--Funciones por operación (registrador, ver, modificar, eliminar).
--Validaciones de contraseña y correo electrónico.
--Flujo lógico diferenciado por tipo de usuario.
--Menús interactivos.
+- Estructura de roles y usuarios.
+- Funciones por operación (registrador, ver, modificar, eliminar).
+- Validaciones de contraseña y correo electrónico.
+- Flujo lógico diferenciado por tipo de usuario.
+- Menús interactivos.
 
 ---
