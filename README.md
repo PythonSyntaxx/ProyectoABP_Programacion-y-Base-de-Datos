@@ -1,24 +1,12 @@
 # Explicacion del codigo
 
-**La función menu_principal() es la puerta de entrada al sistema y la encargada de iniciar el flujo principal del programa.**
-**Muestra un menú simple por consola con 3 opciones:**
+**Clase Usuario (usuario.py)**
+En este archivo desarrollé la clase Usuario, que contiene todos los datos que necesita cada usuario: su ID, nombre, email, contraseña y el ID del rol. También agregué un método llamado mostrar_datos para que el usuario pueda ver su información formateada y de manera clara.
 
-● Registrarse (nuevo usuario)
+Esta clase se usa, por ejemplo, cuando se registra un nuevo usuario o cuando alguien inicia sesión y quiere consultar sus datos personales. Me aseguré de que la estructura fuera fácil de reutilizar y mantener.
 
-● Iniciar sesión
-
-● Salir del sistema
-
-**Lee la opción del usuario mediante input().**
-**Dirige al usuario al flujo correspondiente:**
-
-● Si elige 1, llama a registrar_usuario().
-
-● Si elige 2, llama a login().
-
-● Si pone cualquier otra cosa, muestra "Adiós" y sale del bucle.
-
-**Usa un while True para que el menú se repita hasta que el usuario decida salir.**
+**Clase Rol (rol.py)**
+También trabajé en la clase Rol, que representa el tipo de rol que puede tener un usuario (como "admin" o "estándar").
 
 # Link del diagrama de clases
 
