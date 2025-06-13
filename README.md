@@ -1,6 +1,7 @@
 Sistema de Gestión de Usuarios – Contribución personal
 
 Este repositorio corresponde a un proyecto colaborativo destinado al desarrollo de un sistema en consola para la gestión de usuarios, utilizando Python.
+
 🧩 Mi contribución
 
 Me encargué del desarrollo de las funciones login(), mostrar_menu(), obtener_nombre_rol().
@@ -9,14 +10,14 @@ def login()
 
 Esta función gestiona el inicio de sesión del usuario.
 
-    Pide al usuario su email y contraseña:
+Pide al usuario su email y contraseña:
 
-email = input("Email: ")
-password = input("Contraseña: ")
+    email = input("Email: ")
+    password = input("Contraseña: ")
 
 Busca entre los usuarios registrados (usuarios) uno que coincida con el email y contraseña ingresados:
 
-for usuario in usuarios:
+    for usuario in usuarios:
     if usuario["email"] == email and usuario["password"] == password:
 
 Si encuentra una coincidencia:
