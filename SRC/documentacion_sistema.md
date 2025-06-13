@@ -65,11 +65,4 @@ Cada opción está asociada a métodos del objeto `GestorUsuarios`.
 - No se almacena el estado de sesión más allá del usuario en memoria.
 - Asume que los roles están predefinidos en la base de datos o archivo de datos.
 
----
 
-## 💡 Posibles mejoras
-
-- Implementar hash de contraseñas.
-- Validaciones de formato para email.
-- Persistencia con base de datos real o archivo externo.
-- Modularizar los menús para mejorar mantenibilidad.
