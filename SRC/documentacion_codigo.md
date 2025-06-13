@@ -125,17 +125,18 @@ Esta clase cumple con su rol dentro del sistema al implementar todas las operaci
 ## Kevin Astrada
 
 **Clase Usuario – Archivo usuario.py**
+
 Desarrollé la clase Usuario, que define la estructura de un usuario del sistema. Esta clase incluye los siguientes atributos:
 
-id_user: un identificador único para cada usuario.
+- id_user: un identificador único para cada usuario.
 
-nombre: el nombre del usuario.
+- nombre: el nombre del usuario.
 
-email: la dirección de correo.
+- email: la dirección de correo.
 
-password: la contraseña.
+- password: la contraseña.
 
-id_rol: un número que indica qué tipo de rol tiene el usuario (admin o estándar).
+- id_rol: un número que indica qué tipo de rol tiene el usuario (admin o estándar).
 
 Además, implementé el método mostrar_datos(rol_nombre), que permite mostrar la información del usuario de forma clara en consola, incluyendo el nombre del rol, que se recibe como parámetro.
 
@@ -146,11 +147,12 @@ Cuando se registra un nuevo usuario (registrar_usuario()), se crea una instancia
 Cuando un usuario estándar inicia sesión y quiere ver su información, también se usa esta clase para mostrar sus datos.
 
 **Clase Rol – Archivo rol.py**
+
 También trabajé en la clase Rol, que define la estructura básica de un rol dentro del sistema. Esta clase tiene dos atributos:
 
-id_rol: un número identificador del rol.
+- id_rol: un número identificador del rol.
 
-nombre: el nombre del rol (por ejemplo, "admin" o "estándar").
+- nombre: el nombre del rol (por ejemplo, "admin" o "estándar").
 
 ---
 
