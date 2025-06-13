@@ -23,7 +23,7 @@ class GestorUsuarios:
         global id_user_counter
         nombre = input("Nombre: ")
         email = input("Email: ")
-
+        id_user_counter += 1
         for u in usuarios:
             if u["email"] == email:
                 print("El email ya está registrado.")
@@ -43,7 +43,6 @@ class GestorUsuarios:
 
         nuevo_usuario = Usuario(id_user_counter, nombre, email, password, id_rol)
         usuarios.append(nuevo_usuario.__dict__)
-        id_user_counter += 1
         print("Usuario registrado correctamente.")
 
     def ver_usuarios(self):
