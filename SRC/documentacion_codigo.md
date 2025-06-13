@@ -66,7 +66,7 @@ Cada opción está asociada a métodos del objeto `GestorUsuarios`.
 - No se almacena el estado de sesión más allá del usuario en memoria.
 - Asume que los roles están predefinidos en la base de datos o archivo de datos.
 
-# ERIC MATIÍAS ASTRADA
+# ERIC MATIAS ASTRADA
 Este archivo define la clase GestorUsuarios, que se encarga de gestionar todas las operaciones relacionadas con los usuarios dentro del sistema. Cada uno de los métodos implementados en esta clase corresponde a acciones que suelen figurar en un diagrama de clases, como registrar, ver, modificar y eliminar usuarios.
 
 La clase utiliza una lista llamada usuarios y otra llamada roles, ambas importadas desde el archivo datos.py. Además, hace uso de la clase Usuario para representar a cada persona registrada.
@@ -120,4 +120,37 @@ Cómo lo hace: Crea un objeto de la clase Usuario con los datos del diccionario 
 
 Esta clase cumple con su rol dentro del sistema al implementar todas las operaciones básicas necesarias para administrar usuarios. Se destaca el uso de programación orientada a objetos, la validación de datos y la integración con otras partes del sistema como la clase Usuario y el módulo datos.
 
+
+---
+## Kevin Astrada
+
+**Clase Usuario – Archivo usuario.py**
+Desarrollé la clase Usuario, que define la estructura de un usuario del sistema. Esta clase incluye los siguientes atributos:
+
+id_user: un identificador único para cada usuario.
+
+nombre: el nombre del usuario.
+
+email: la dirección de correo.
+
+password: la contraseña.
+
+id_rol: un número que indica qué tipo de rol tiene el usuario (admin o estándar).
+
+Además, implementé el método mostrar_datos(rol_nombre), que permite mostrar la información del usuario de forma clara en consola, incluyendo el nombre del rol, que se recibe como parámetro.
+
+Esta clase se utiliza en varias partes del sistema:
+
+Cuando se registra un nuevo usuario (registrar_usuario()), se crea una instancia de esta clase.
+
+Cuando un usuario estándar inicia sesión y quiere ver su información, también se usa esta clase para mostrar sus datos.
+
+**Clase Rol – Archivo rol.py**
+También trabajé en la clase Rol, que define la estructura básica de un rol dentro del sistema. Esta clase tiene dos atributos:
+
+id_rol: un número identificador del rol.
+
+nombre: el nombre del rol (por ejemplo, "admin" o "estándar").
+
+---
 
