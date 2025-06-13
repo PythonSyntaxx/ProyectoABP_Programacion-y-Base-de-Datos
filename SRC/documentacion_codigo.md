@@ -66,7 +66,7 @@ Cada opción está asociada a métodos del objeto `GestorUsuarios`.
 - No se almacena el estado de sesión más allá del usuario en memoria.
 - Asume que los roles están predefinidos en la base de datos o archivo de datos.
 
-
+# ERIC MATIÍAS ASTRADA
 Este archivo define la clase GestorUsuarios, que se encarga de gestionar todas las operaciones relacionadas con los usuarios dentro del sistema. Cada uno de los métodos implementados en esta clase corresponde a acciones que suelen figurar en un diagrama de clases, como registrar, ver, modificar y eliminar usuarios.
 
 La clase utiliza una lista llamada usuarios y otra llamada roles, ambas importadas desde el archivo datos.py. Además, hace uso de la clase Usuario para representar a cada persona registrada.
