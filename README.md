@@ -54,3 +54,28 @@ El proyecto representa una simulación realista de un sistema básico de gestió
 - Menús interactivos.
 
 ---
+## 📦 Producto final
+
+Sistema funcional de consola:
+- Registro, visualización, edición y eliminación de usuarios.
+- Diferenciación clara entre usuarios estándar y administradores.
+- Validación de contraseñas y control de duplicidad.
+
+---
+
+## 👨‍💻 Tecnologías utilizadas
+
+- Python
+- Consola interactiva (sin base de datos)
+
+---
+
+## Integrantes:
+
+
+|         Nombre        |        Apellido                |            Correo Electrónico           |                   Github                  |
+|-----------------------|--------------------------------|-----------------------------------------|-------------------------------------------|
+|       Ariel Orlando        |        Fernandez          |   lic.arielfernandez.hys@gmail.com             |  [https://github.com/fernandez-ariel](https://github.com/fernandez-ariel) |
+|       Eric Matías        |        Astrada          |   matiasastrada482@gmail.com             |  https://github.com/Matias038 |
+|       Axel Rodrigo        |        Cortez          |   rodrigocortez803@gmail.com             |  [https://github.com/AxelCortez11](https://github.com/AxelCortez11) |
+|       Kevin Agustin       |        Astrada          |   kevin.agustin.astrada@gmail.com             |  https://github.com/KevinAstrada |
