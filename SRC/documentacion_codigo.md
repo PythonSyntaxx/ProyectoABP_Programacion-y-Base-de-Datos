@@ -156,3 +156,108 @@ También trabajé en la clase Rol, que define la estructura básica de un rol de
 
 ---
 
+# Axel Rodrigo Leonel Cortez
+
+Documentación: main.py
+
+Descripción general
+
+Este archivo representa el punto de entrada principal del sistema de gestión de usuarios en consola. Sirve como interfaz de navegación para que el usuario pueda registrarse, iniciar sesión o salir del programa.
+Funcionalidad principal
+
+    Importación del sistema:
+
+from sistema import Sistema
+
+Se importa la clase Sistema desde un módulo externo (sistema.py), que contiene la lógica principal de autenticación y gestión.
+
+Inicialización del sistema:
+
+    sistema = Sistema()
+
+    Se crea una instancia de la clase Sistema, la cual permite acceder a sus métodos y funcionalidades (como registro e inicio de sesión).
+
+    Menú principal (bucle infinito):
+    Se presenta un menú interactivo en consola con tres opciones:
+
+        Registrarse:
+        Llama al método registrar_usuario() a través del gestor interno del sistema (sistema.gestor), permitiendo crear una nueva cuenta de usuario.
+
+        Iniciar sesión:
+        Llama al método login() del objeto Sistema, iniciando el proceso de autenticación de un usuario existente.
+
+        Salir del programa:
+        Finaliza el bucle y muestra un mensaje de despedida.
+
+        Validación de entrada:
+        Si el usuario ingresa una opción no válida, se muestra un mensaje de error y se vuelve a mostrar el menú.
+
+Ejemplo del flujo de ejecución
+
+===== SISTEMA DE GESTIÓN DE USUARIOS =====
+1. Registrarse
+2. Iniciar sesión
+3. Salir
+Elige una opción:
+
+Dependencias
+
+    Este archivo depende del módulo externo sistema.py, que debe contener la definición de la clase Sistema y su lógica de negocio.
+
+Documentación: datos.py
+
+Descripción general
+
+Este módulo contiene los datos base necesarios para el funcionamiento del sistema de gestión de usuarios. Define tanto los roles disponibles como un conjunto inicial de usuarios predefinidos, además de una variable auxiliar para llevar el control del ID de usuario.
+
+Contenido del archivo
+🔹 roles
+
+roles = [
+    {"id_rol": 1, "rol": "admin"},
+    {"id_rol": 2, "rol": "estandar"}
+]
+
+    Es una lista de diccionarios que define los tipos de rol disponibles en el sistema.
+
+    Cada rol tiene:
+
+        id_rol: identificador numérico del rol.
+
+        rol: nombre del rol (ej. "admin" o "estandar").
+
+    Esta estructura permite asignar privilegios diferenciados según el tipo de usuario.
+
+🔹 usuarios
+
+usuarios = [
+    {"id_user": 1, "nombre": "admin", "email": "admin@gmail.com", "password": "Admin1", "id_rol": 1},
+    {"id_user": 2, "nombre": "estandar", "email": "estandar@gmail.com", "password": "abc123", "id_rol": 2}
+]
+
+    Lista de usuarios registrados inicialmente en el sistema.
+
+    Cada usuario contiene:
+
+        id_user: ID único de usuario.
+
+        nombre: nombre del usuario.
+
+        email: correo electrónico utilizado para iniciar sesión.
+
+        password: contraseña (almacenada en texto plano para este ejercicio).
+
+        id_rol: referencia al rol asignado (coincide con los IDs en roles).
+
+✅ Estos datos sirven como usuarios de prueba o base para iniciar el sistema.
+🔹 id_user_counter
+
+id_user_counter = 2
+
+    Variable que lleva el conteo del último ID de usuario asignado.
+
+    Se incrementa al registrar nuevos usuarios, asegurando que cada uno tenga un id_user único y consecutivo.
+
+Ejemplo de uso
+
+Este archivo es normalmente importado por otros módulos, como sistema.py, para acceder a la base de datos simulada en memoria. No contiene funciones, solo datos compartidos.
