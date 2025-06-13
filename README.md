@@ -26,7 +26,6 @@ Desarrollo de un sistema de gestión de usuarios con control de acceso y privile
 - Imposibilidad de administrar usuarios sin interfaz administrativa.
 
 ---
-
 ## 🎯 Objetivos
 
 **General:**  
@@ -49,13 +48,12 @@ El proyecto representa una simulación realista de un sistema básico de gestió
 ## 🛠️ Acciones realizadas
 
 - Estructura de roles y usuarios.
-- Funciones por operación (registrar, ver, modificar, eliminar).
-- Validaciones de contraseña y email.
+- Funciones por operación (registrador, ver, modificar, eliminar).
+- Validaciones de contraseña y correo electrónico.
 - Flujo lógico diferenciado por tipo de usuario.
 - Menús interactivos.
 
 ---
-
 ## 📦 Producto final
 
 Sistema funcional de consola:
